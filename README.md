@@ -14,6 +14,11 @@
 
 Quran Kareem is a modern, responsive Islamic web application that serves the Muslim community with essential daily tools. Built with React and designed with Arabic RTL support, it provides a seamless experience for reading the Quran, checking prayer times, and accessing daily Islamic remembrances (Azkar).
 
+## 💻 Demo 
+  <a href='https://quran-kareem-one.vercel.app/' style='display: block'>
+    Demo Link
+  </a>
+  
 ## ✨ Features
 
 ### 📖 **Complete Quran Reader**
