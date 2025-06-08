@@ -23,7 +23,7 @@ const QuranContainer = () => {
     if (surahs == null)
         return <p>loading....</p>
     return (
-        <div id='quran' className={styles.container} style={{ paddingBottom: '4rem' }}>
+        <div id='quran' className={styles.container}>
             <ul className={styles.surahs}>
                 {surahs.map(surah => {
                     return (

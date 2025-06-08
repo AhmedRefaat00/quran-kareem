@@ -6,7 +6,7 @@
     grid-template-rows: 1fr auto;
     gap: clamp(0.5rem, 2vw, 1rem);
     width: min(90vw, 1400px);
-    height: min(92vh, 800px);
+    height: min(98vh, 800px);
     margin-inline: auto;
     background-color: var(--card-background);
     overflow: hidden;
@@ -16,6 +16,7 @@
     padding: clamp(0.5rem, 2vw, 1rem);
     margin-top: clamp(2rem, 5vw, 5rem);
     margin-bottom: clamp(5rem, 10vw, 10rem);
+    
 }
 
 .surahs {
@@ -72,6 +73,7 @@
     scrollbar-color: var(--main-color) var(--card-background);
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
+    
 }
 
 .ayah {
@@ -111,15 +113,14 @@
 .audio {
     grid-area: audio;
     width: 100%;
-    padding: clamp(0.5rem, 2vw, 1rem);
     text-align: center;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
-    font-weight: 500;
+    font-weight: 300;
     color: var(--main-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 60px;
+        
 }
 
 /* Tablet landscape */

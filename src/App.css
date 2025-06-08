@@ -7,7 +7,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 0;
+    margin: 0;
+    
+    
 }
 
 /* Hero Section */
@@ -65,6 +68,7 @@
 main {
     width: 100%;
     background-color: var(--background-color);
+    
 }
 
 .prayers {
@@ -158,7 +162,6 @@ main {
     margin-top: 1rem;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 800px;
 }
 
 .azkar-switch button {
@@ -244,6 +247,7 @@ main {
 .azkar-card {
     min-width: 100%;
     height: 100%;
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -518,4 +522,5 @@ main {
     .hero {
         height: 50vh;
     }
+    
 }
