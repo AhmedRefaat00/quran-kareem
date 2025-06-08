@@ -1,6 +1,6 @@
 import Navbar from './components/navbar/Navbar';
 import './App.css';
-import { useEffect, useRef, useState, useMemo } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 import FullScreenMessage from './components/fullScreenMsg/FullScreenMessage';
 import fajr from './assets/images/fajr.png';
@@ -125,16 +125,16 @@ function App() {
   };
 
   // Memoize FullScreenMessage to prevent unnecessary re-renders
-  const fullScreenMessage = useMemo(() => (
-    <FullScreenMessage
-      message="هذا التطبيق تم تطويره للشاشات الكبيرة. للحصول على أفضل تجربة، يُرجى استخدام جهاز بشاشة أكبر."
-      clickable={true}
-    />
-  ), []); // Empty dependency array means it only renders once
+  // const fullScreenMessage = useMemo(() => (
+  //   <FullScreenMessage
+  //     message="هذا التطبيق تم تطويره للشاشات الكبيرة. للحصول على أفضل تجربة، يُرجى استخدام جهاز بشاشة أكبر."
+  //     clickable={true}
+  //   />
+  // ), []); // Empty dependency array means it only renders once
 
   return (
     <div className="app-container" dir='rtl'>
-      {fullScreenMessage}
+      {/* {fullScreenMessage} */}
       <div className="hero" id='hero' >
         <Navbar />
         <h1>بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</h1>
