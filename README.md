@@ -17,6 +17,7 @@ Quran Kareem is a modern, responsive Islamic web application that serves the Mus
   <a href='https://quran-kareem-one.vercel.app/' style='display: block'>
     Demo Link
   </a>
+  
 ## ✨ Features
 
 ### 📖 **Complete Quran Reader**
