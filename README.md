@@ -3,7 +3,7 @@
 <div align="center">
   <img src="public/logo.png" alt="Quran Kareem Logo" width="120" height="120">
   **A comprehensive Islamic web application built with React**
-  <a href='https://quran-kareem-one.vercel.app/'>
+  <a href='https://quran-kareem-one.vercel.app/' style='display: block'>
     Demo Link
   </a>
   
