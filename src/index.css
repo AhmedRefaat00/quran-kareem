@@ -1,0 +1,121 @@
+/* CSS Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for consistent theming */
+:root {
+    /* Light Mode Colors */
+    --footer-color: #8D771A;
+    --main-color: #CFA44A;
+    --main2-color: #864320;
+    --title-color: #393939;
+    --text-color: #444;
+    --text-color-light: #A6A6A6;
+    --white-color: #FBFEFD;
+    --background-color: #FAFAFA;
+    /* Light background for light mode */
+    --background-secondary: #F5F5F5;
+    /* Secondary light background */
+    --card-background: #FFFFFF;
+    /* White for cards */
+
+    --border-color: #e0e0e0;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+
+    --navbar-color: #fafafa8f;
+    --ayah-background-color: #fafafa0a;
+
+    /* Typography */
+    --font-family-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-arabic: 'Amiri', 'Traditional Arabic', 'Times New Roman', serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+
+    /* Spacing */
+   
+    /* Transitions */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+    --footer-color: #B8941F;
+    --main-color: #E6B95A;
+    --main2-color: #A85A3A;
+    --title-color: #E5E5E5;
+    --text-color: #D1D1D1;
+    --text-color-light: #9CA3AF;
+    --white-color: #FBFEFD;
+    --background-color: #1A1A1A;
+    /* Dark background */
+    --background-secondary: #2A2A2A;
+    /* Secondary dark background */
+    --card-background: #2F2F2F;
+    /* Dark cards */
+
+
+    --border-color: #404040;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.4);
+
+
+    --navbar-color: #1A1A1A8f;
+    --ayah-background-color: #1a1a1a44;
+}
+
+/* Base HTML elements */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--text-color);
+    /* background-image: linear-gradient(to right, var(--background-color), var(--main-color)); */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* Arabic text styling */
+.arabic-text {
+    font-family: var(--font-family-arabic);
+    font-size: var(--font-size-lg);
+    line-height: 2;
+    text-align: right;
+    direction: rtl;
+}
+
+/* //////////////////////// */
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color var(--transition-normal);
+}
+
+a:hover {
+    color: var(--main-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
