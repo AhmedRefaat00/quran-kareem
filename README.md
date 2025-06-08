@@ -3,9 +3,6 @@
 <div align="center">
   <img src="public/logo.png" alt="Quran Kareem Logo" width="120" height="120">
   **A comprehensive Islamic web application built with React**
-  <a href='https://quran-kareem-one.vercel.app/' style='display: block'>
-    Demo Link
-  </a>
   
   [![React](https://img.shields.io/badge/React-19.1.0-blue.svg)](https://reactjs.org/)
   [![Vite](https://img.shields.io/badge/Vite-6.3.5-purple.svg)](https://vitejs.dev/)
@@ -16,6 +13,10 @@
 
 Quran Kareem is a modern, responsive Islamic web application that serves the Muslim community with essential daily tools. Built with React and designed with Arabic RTL support, it provides a seamless experience for reading the Quran, checking prayer times, and accessing daily Islamic remembrances (Azkar).
 
+## ✨ Demo 
+  <a href='https://quran-kareem-one.vercel.app/' style='display: block'>
+    Demo Link
+  </a>
 ## ✨ Features
 
 ### 📖 **Complete Quran Reader**
