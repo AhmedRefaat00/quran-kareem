@@ -11,8 +11,23 @@ const FullScreenMessage = ({
 }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [shouldShow, setShouldShow] = useState(false);
+    const [hasBeenDismissed, setHasBeenDismissed] = useState(false);
+
+    // Check if user has already dismissed this message
+    useEffect(() => {
+        const dismissed = localStorage.getItem('fullScreenMessageDismissed');
+        if (dismissed === 'true') {
+            setHasBeenDismissed(true);
+        }
+    }, []);
 
     useEffect(() => {
+        // Don't show if already dismissed
+        if (hasBeenDismissed) {
+            setShouldShow(false);
+            return;
+        }
+
         const checkScreenSize = () => {
             const isSmallScreen = window.innerWidth <= 1024;
             setShouldShow(isSmallScreen && show);
@@ -25,7 +40,7 @@ const FullScreenMessage = ({
         window.addEventListener('resize', checkScreenSize);
 
         return () => window.removeEventListener('resize', checkScreenSize);
-    }, [show]);
+    }, [show, hasBeenDismissed]);
 
     useEffect(() => {
         if (shouldShow) {
@@ -40,6 +55,9 @@ const FullScreenMessage = ({
         setIsVisible(false);
         setTimeout(() => {
             setShouldShow(false);
+            setHasBeenDismissed(true);
+            // Store dismissal in localStorage so it won't show again
+            localStorage.setItem('fullScreenMessageDismissed', 'true');
             onClose();
         }, 300); // Wait for animation to complete
     };

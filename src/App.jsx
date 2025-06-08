@@ -1,6 +1,6 @@
 import Navbar from './components/navbar/Navbar';
 import './App.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 import FullScreenMessage from './components/fullScreenMsg/FullScreenMessage';
 import fajr from './assets/images/fajr.png';
@@ -124,12 +124,17 @@ function App() {
     }
   };
 
+  // Memoize FullScreenMessage to prevent unnecessary re-renders
+  const fullScreenMessage = useMemo(() => (
+    <FullScreenMessage
+      message="هذا التطبيق تم تطويره للشاشات الكبيرة. للحصول على أفضل تجربة، يُرجى استخدام جهاز بشاشة أكبر."
+      clickable={true}
+    />
+  ), []); // Empty dependency array means it only renders once
+
   return (
     <div className="app-container" dir='rtl'>
-      <FullScreenMessage
-        message="هذا التطبيق تم تطويره للشاشات الكبيرة. للحصول على أفضل تجربة، يُرجى استخدام جهاز بشاشة أكبر."
-        clickable={true}
-      />
+      {fullScreenMessage}
       <div className="hero" id='hero' >
         <Navbar />
         <h1>بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</h1>
@@ -138,7 +143,7 @@ function App() {
           <audio id="audio" ref={audioRef} controls autoPlay src={audio} style={{ display: 'none' }} />
           <button onClick={handleAyahPlay} style={{
             backgroundColor: 'var(--background-color)', color: 'var(--text-color)', border: 'none',
-            cursor: 'pointer', borderRadius: '50%', padding: '0.5rem', width: '50px', height: '50px' 
+            cursor: 'pointer', borderRadius: '50%', padding: '0.5rem', width: '50px', height: '50px'
           }}>
             {isPlaying ? <Pause /> : <Play />}
           </button>
@@ -149,7 +154,7 @@ function App() {
         {error && <p style={{ color: 'red' }}>{error}</p>}
 
         <div className='prayers' id='prayers'>
-          <Prayer name='الفجر' image={fajr} time={prayerTimes?.Fajr}  />
+          <Prayer name='الفجر' image={fajr} time={prayerTimes?.Fajr} />
           <Prayer name='الظهر' image={dhuhr} time={prayerTimes?.Dhuhr} />
           <Prayer name='العصر' image={asr} time={prayerTimes?.Asr} />
           <Prayer name='المغرب' image={maghrib} time={prayerTimes?.Maghrib} />
@@ -257,7 +262,7 @@ function App() {
           <h2>القرآن الكريم</h2>
         </div>
         <QuranContainer></QuranContainer>
-        
+
 
       </main>
 
